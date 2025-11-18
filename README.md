@@ -1,6 +1,5 @@
-# audiobookshelf
-AudioBookShelf- Audio libros - Docker compose
+# AudioBookDhelf
 
-Ver en "localhost:8200"
+Ver en "http://localhost:8200"
 
 Usuario y Password : los que tu decidas
