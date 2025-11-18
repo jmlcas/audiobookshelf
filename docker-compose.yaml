@@ -1,18 +1,16 @@
-version: '3.3'
-
 services:
 
   audiobookshelf:
     image: ghcr.io/advplyr/audiobookshelf:latest
     container_name: audiobookshelf
+    restart: unless-stopped
     environment:
-      - AUDIOBOOKSHELF_UID=1000 #change to match your server
-      - AUDIOBOOKSHELF_GID=1000 #change to match your server
+      - AUDIOBOOKSHELF_UID=1000
+      - AUDIOBOOKSHELF_GID=1000
     ports:
-      - "8200:80" #do not change :80
+      - "8200:80"
     volumes:
       - ./abs/audiobooks:/audiobooks #map to your serverlocations
       - ./abs/podcasts:/podcasts #map to your serverlocations
       - ./abs/config:/config #map to your serverlocations
       - ./abs/metadata:/metadata #map to your serverlocations
-
