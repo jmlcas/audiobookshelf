@@ -7,10 +7,11 @@ services:
     environment:
       - AUDIOBOOKSHELF_UID=1000
       - AUDIOBOOKSHELF_GID=1000
+      . TZ=Europe/Madrid
     ports:
       - "8200:80"
     volumes:
-      - ./abs/audiobooks:/audiobooks #map to your serverlocations
-      - ./abs/podcasts:/podcasts #map to your serverlocations
-      - ./abs/config:/config #map to your serverlocations
-      - ./abs/metadata:/metadata #map to your serverlocations
+      - ./abs/audiobooks:/audiobooks
+      - ./abs/podcasts:/podcasts
+      - ./abs/config:/config
+      - ./abs/metadata:/metadata
